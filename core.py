@@ -52,7 +52,7 @@ def formatageHadith(hadith_base):
 
     final_hadith = []
     hadith_length = len(hadith_base)
-    tweet_limit = 265
+    tweet_limit = 252
 
     corrector_index = 1
     last_corrector_index = 0
@@ -124,7 +124,7 @@ def cleaner(hadith):
     selectionned_hadith_first_cleaner = str(hadith).strip("[]")
     selectionned_hadith_second_cleaner = re.sub(r'\\n', '', selectionned_hadith_first_cleaner)
     cleaned_hadith = re.sub(r'\n', '', selectionned_hadith_second_cleaner)
-    return cleaned_hadith
+    return cleaned_hadith.strip("'")
 
 
 def launcher():
